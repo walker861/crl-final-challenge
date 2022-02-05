@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Oswald:wght@300;400;700&display=swap');
+
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif;
+*/
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: hsl(0, 0%, 50%);
+}
+
+.container {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.5;
+  padding: 2rem 0;
+}
+
+.header {
+  background-color: #2e323f;
+}
+
+.logo {
+  margin-top: 0.4rem;
+}
+
+.hamburger {
+  position: absolute;
+  background-color: #6f737f;
+  width: 40px;
+  height: 40px;
+  padding-top: 9px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: 4px auto;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+.nav__list {
+  text-transform: uppercase;
+}
+
+.nav__list--secondary {
+  margin-bottom: 0;
+  padding-bottom: 2rem;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+.nav__link--button {
+  color: #fff;
+  background-color: #a59678;
+  padding: 0.1em 1em;
+  border-radius: 10rem;
+}
+
+.intro {
+  background-color: #3b4050;
+  color: #fff;
+  padding: 4rem 0;
+}
+
+.intro__title {
+  font-size: 60px;
+  margin: 0;
+}
+
+.intro__title--dark {
+  display: block;
+  color: #a59678;
+}
+
+.intro__text {
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.intro__button {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+  background-color: #a59678;
+  padding: 0.25em 1.25em;
+  margin: 0.8rem;
+  border-radius: 10rem;
+}
+
+.intro__button:focus,
+.intro__button:hover {
+  cursor: pointer;
+  color: hsl(0, 0%, 50%);
+  background-color: hsl(40, 20%, 40%);
+}
+
+.column__text {
+  color: #6f737f;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.column__title {
+  color: #a59678;
+  margin: 0;
+}
+
+.section-one {
+  background-color: hsl(40, 20%, 95%);
+}
+
+.aside__box {
+  background-color: #3b4050;
+  color: #fff;
+  margin: 1em auto;
+  padding: 1em 2em;
+}
+
+.aside__text {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer {
+  background-color: #3b4050;
+  color: #fff;
+}
+
+.footer__title {
+  font-size: 30px;
+  padding-bottom: 1.5rem;
+}
+
+.footer__about--text {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer__section-title {
+  color: #a59678;
+}
+
+.footer__link {
+  font-family: 'Montserrat', sans-serif;
+}
+
+@media (min-width: 700px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .nav__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .nav__list--secondary {
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav__item {
+    padding: 0 0.5rem;
+  }
+
+  .logo {
+    margin: 0;
+    margin-right: auto;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .intro .container {
+    text-align: left;
+    display: flex;
+    gap: 4rem;
+  }
+
+  .intro .column {
+    width: 55%;
+    margin-top: auto;
+  }
+
+  .intro__title {
+    width: 45%;
+  }
+
+  .section-one .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .section-one .column {
+    width: 30%;
+  }
+
+  .section-two .column {
+    text-align: start;
+  }
+
+  .aside {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .aside__box {
+    width: 33%;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .column-one {
+    max-width: 40%;
+    text-align: start;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section-two .container {
+    display: flex;
+    gap: 4rem;
+  }
+
+  .section-two .column {
+    max-width: 55%;
+  }
+  .aside {
+    display: block;
+  }
+
+  .aside__box {
+    width: 100%;
+  }
+}
